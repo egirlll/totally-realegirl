@@ -1,0 +1,8 @@
+{
+  "name": "mikayla-landing",
+  "version": "1.0.0",
+  "description": "Landing page for mikayla ~ Catfish Findom",
+  "scripts": {
+    "build": "echo 'Static site - no build needed'"
+  }
+}
