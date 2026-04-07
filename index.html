@@ -205,7 +205,6 @@
     <script>
         const links = {
             throne: 'https://throne.com/onemoresend',
-            paypal: 'paypal@example.com',
             autodrainer: 'https://gofile.io/d/YmSp4q'
         };
 
@@ -216,13 +215,7 @@
         };
 
         function navigate(type) {
-            if (type === 'paypal') {
-                navigator.clipboard.writeText(links.paypal).then(() => {
-                    alert('PayPal copied!');
-                });
-            } else {
-                window.location.href = links[type];
-            }
+            window.location.href = links[type];
         }
 
         function toggleDropdown() {
