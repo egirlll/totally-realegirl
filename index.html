@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mikayla ~ Catfish Findom</title>
+    <title>Totally Real Egirl</title>
     <style>
         * {
             margin: 0;
@@ -12,7 +12,7 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             min-height: 100vh;
             display: flex;
@@ -22,272 +22,224 @@
         }
 
         .container {
-            background: rgba(30, 30, 50, 0.95);
-            border-radius: 20px;
-            padding: 40px;
-            max-width: 500px;
-            width: 100%;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-            border: 2px solid #ff1493;
-        }
-
-        .header {
             text-align: center;
-            margin-bottom: 40px;
+            max-width: 500px;
         }
 
         .avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 50px;
-            border: 4px solid #ff1493;
-            overflow: hidden;
-            object-fit: cover;
+            margin-bottom: 30px;
         }
 
         .avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #ff1493;
+            box-shadow: 0 0 20px rgba(255, 20, 147, 0.6);
         }
 
-        .header h1 {
-            font-size: 28px;
+        h1 {
             color: #ffffff;
-            margin-bottom: 5px;
-            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 28px;
         }
 
-        .header p {
+        .subtitle {
             color: #ff1493;
+            margin-bottom: 40px;
             font-size: 14px;
-            font-weight: 600;
         }
 
-        .buttons-grid {
+        .links {
             display: flex;
             flex-direction: column;
             gap: 12px;
         }
 
         .btn {
-            padding: 16px 24px;
+            padding: 12px 24px;
             border: none;
-            border-radius: 12px;
+            border-radius: 8px;
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
             display: block;
-            text-align: center;
-            position: relative;
         }
 
         .btn-primary {
             background: linear-gradient(135deg, #ff1493 0%, #ff69b4 100%);
             color: white;
+            box-shadow: 0 8px 20px rgba(255, 20, 147, 0.4);
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(255, 20, 147, 0.4);
+            box-shadow: 0 12px 30px rgba(255, 20, 147, 0.6);
         }
 
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.1);
-            color: #ffffff;
+            background: rgba(255, 20, 147, 0.2);
+            color: #ff1493;
             border: 2px solid #ff1493;
         }
 
         .btn-secondary:hover {
-            background: rgba(255, 20, 147, 0.2);
-            transform: translateY(-2px);
+            background: rgba(255, 20, 147, 0.3);
         }
 
         .crypto-dropdown {
             position: relative;
+            display: inline-block;
+            width: 100%;
         }
 
-        .dropdown-btn {
+        .crypto-btn {
             width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
         }
 
         .dropdown-content {
             display: none;
             position: absolute;
-            background: rgba(30, 30, 50, 0.98);
+            background: rgba(30, 30, 50, 0.95);
             min-width: 100%;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-            padding: 8px 0;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
             z-index: 1;
-            border-radius: 12px;
-            margin-top: 4px;
-            overflow: hidden;
+            border-radius: 8px;
             border: 2px solid #ff1493;
+            margin-top: 5px;
         }
 
         .dropdown-content.active {
             display: block;
         }
 
-        .crypto-option {
-            color: #ffffff;
-            padding: 12px 24px;
-            text-decoration: none;
-            display: block;
-            transition: background 0.2s;
+        .dropdown-content button {
+            padding: 12px 20px;
+            width: 100%;
+            border: none;
+            background: none;
+            color: #ff1493;
+            text-align: left;
             cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
         }
 
-        .crypto-option:hover {
-            background: rgba(255, 20, 147, 0.3);
+        .dropdown-content button:first-child {
+            border-radius: 6px 6px 0 0;
+        }
+
+        .dropdown-content button:last-child {
+            border-radius: 0 0 6px 6px;
+        }
+
+        .dropdown-content button:hover {
+            background: rgba(255, 20, 147, 0.2);
+        }
+
+        .copied-msg {
+            display: none;
+            color: #4ade80;
+            font-size: 12px;
+            margin-top: 5px;
         }
 
         .footer {
-            text-align: center;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #ff1493;
-            color: #aaa;
+            margin-top: 40px;
+            color: #999;
             font-size: 12px;
         }
 
         @media (max-width: 480px) {
-            .container {
-                padding: 30px 20px;
+            .avatar img {
+                width: 120px;
+                height: 120px;
             }
 
-            .header h1 {
-                font-size: 20px;
+            h1 {
+                font-size: 24px;
             }
 
             .btn {
-                padding: 14px 20px;
-                font-size: 15px;
+                font-size: 14px;
+                padding: 10px 20px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <div class="avatar">
-                <img src="pfp.jpg" alt="mikayla">
-            </div>
-            <h1>mikayla</h1>
-            <p>~ Catfish Findom ~</p>
+        <div class="avatar">
+            <img src="pfp.jpg" alt="Totally Real Egirl">
         </div>
 
-        <div class="buttons-grid">
+        <h1>Totally Real Egirl</h1>
+        <p class="subtitle">It's totally safe to interact with me 💋</p>
+
+        <div class="links">
             <button class="btn btn-primary" onclick="navigate('throne')">Throne</button>
 
-            <button class="btn btn-primary" onclick="copyPayPal()">PayPal</button>
+            <button class="btn btn-primary" onclick="navigate('paypal')">PayPal</button>
 
-            <div class="crypto-dropdown">
-                <button class="btn btn-primary dropdown-btn" onclick="toggleDropdown()">
-                    Crypto <span id="dropdown-arrow">▼</span>
-                </button>
-                <div id="crypto-menu" class="dropdown-content">
-                    <div class="crypto-option" onclick="copyAddress('sol', this)">Solana (SOL)</div>
-                    <div class="crypto-option" onclick="copyAddress('eth', this)">Ethereum (ETH)</div>
-                    <div class="crypto-option" onclick="copyAddress('btc', this)">Bitcoin (BTC)</div>
+            <a href="https://wheel-free.vercel.app/" class="btn btn-primary">🎡 Spin Wheel</a>
+
+            <div class="crypto-dropdown" onclick="toggleDropdown()">
+                <button class="btn btn-primary crypto-btn">Crypto ▼</button>
+                <div class="dropdown-content" id="cryptoMenu">
+                    <button onclick="copyAddress('BTC')">Bitcoin</button>
+                    <button onclick="copyAddress('ETH')">Ethereum</button>
+                    <button onclick="copyAddress('SOL')">Solana</button>
                 </div>
             </div>
 
-            <button class="btn btn-secondary" onclick="navigate('ai-bot')">AI Bot</button>
-            
-            <button class="btn btn-secondary" onclick="navigate('write-for-me')">Write For Me</button>
-            
-            <button class="btn btn-secondary" onclick="navigate('puzzle')">Puzzle</button>
-            
-            <button class="btn btn-secondary" onclick="navigate('hypno')">waste your time ( hypno )</button>
-            
             <button class="btn btn-secondary" onclick="navigate('autodrainer')">Auto Drainer</button>
         </div>
 
         <div class="footer">
-            <p>All links managed by mikayla</p>
+            <p>All interactions are totally real 💋</p>
         </div>
     </div>
 
     <script>
         const links = {
             throne: 'https://throne.com/onemoresend',
-            'ai-bot': 'https://t.me/onemoresendbot',
-            'write-for-me': 'https://writeforme-kappa.vercel.app/',
-            puzzle: 'https://puzzle-mikayla.vercel.app/',
-            hypno: 'https://piper-eight.vercel.app/',
+            paypal: 'paypal@example.com',
             autodrainer: 'https://gofile.io/d/YmSp4q'
         };
 
-        const addresses = {
-            sol: '9GbXcDDXDS5fFTWFPx67JCSEcDPR16cxyjj9gd95P4Mf',
-            eth: '0x523f23843847382965b255725A96894C9d231Eaa',
-            btc: 'bc1q07vw7hq3f6veq4xa6lff7kz88kceg49da0npyz'
+        const cryptoAddresses = {
+            BTC: '1A1z7agoat4BTC...',
+            ETH: '0x742d35Cc6634C0532925a3b844Bc9e7595f...',
+            SOL: 'DYw8jCTfwHNRob...'
         };
 
+        function navigate(type) {
+            if (type === 'paypal') {
+                navigator.clipboard.writeText(links.paypal).then(() => {
+                    alert('PayPal copied!');
+                });
+            } else {
+                window.location.href = links[type];
+            }
+        }
+
         function toggleDropdown() {
-            const menu = document.getElementById('crypto-menu');
-            const arrow = document.getElementById('dropdown-arrow');
+            const menu = document.getElementById('cryptoMenu');
             menu.classList.toggle('active');
-            arrow.textContent = menu.classList.contains('active') ? '▲' : '▼';
         }
 
-        function navigate(key) {
-            const link = links[key];
-            if (!link) {
-                alert(`${key} link not configured yet`);
-                return;
-            }
-            window.location.href = link;
-        }
-
-        function copyPayPal() {
-            const paypalEmail = 'realbrattybrooke@gmail.com';
-            navigator.clipboard.writeText(paypalEmail).then(() => {
-                alert('✓ PayPal email copied: ' + paypalEmail);
-            }).catch(() => {
-                alert('Failed to copy');
+        function copyAddress(crypto) {
+            navigator.clipboard.writeText(cryptoAddresses[crypto]).then(() => {
+                alert(crypto + ' address copied!');
             });
         }
 
-        function copyAddress(crypto, element) {
-            const address = addresses[crypto];
-            if (!address) {
-                alert('Address not found');
-                return;
-            }
-            navigator.clipboard.writeText(address).then(() => {
-                const originalText = element.textContent;
-                element.textContent = '✓ Copied!';
-                setTimeout(() => {
-                    element.textContent = originalText;
-                    document.getElementById('crypto-menu').classList.remove('active');
-                    document.getElementById('dropdown-arrow').textContent = '▼';
-                }, 2000);
-            }).catch(() => {
-                alert('Failed to copy');
-            });
-        }
-
-        // Close dropdown when clicking outside
         document.addEventListener('click', function(event) {
             const dropdown = document.querySelector('.crypto-dropdown');
             if (!dropdown.contains(event.target)) {
-                document.getElementById('crypto-menu').classList.remove('active');
-                document.getElementById('dropdown-arrow').textContent = '▼';
+                document.getElementById('cryptoMenu').classList.remove('active');
             }
         });
     </script>
