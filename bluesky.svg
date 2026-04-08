@@ -1,16 +1,16 @@
-<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Top left wing -->
-  <path d="M10 8 Q5 8 5 14 Q5 22 10 24 Q14 22 14 14 Q14 8 10 8" fill="#1185FE"/>
+  <ellipse cx="28" cy="25" rx="18" ry="22" fill="#1185FE"/>
   
   <!-- Top right wing -->
-  <path d="M30 8 Q35 8 35 14 Q35 22 30 24 Q26 22 26 14 Q26 8 30 8" fill="#1185FE"/>
+  <ellipse cx="72" cy="25" rx="18" ry="22" fill="#1185FE"/>
   
   <!-- Bottom left wing -->
-  <path d="M10 26 Q5 26 5 32 Q5 36 10 36 Q14 34 14 28 Q14 26 10 26" fill="#1185FE"/>
+  <ellipse cx="28" cy="75" rx="18" ry="22" fill="#1185FE"/>
   
   <!-- Bottom right wing -->
-  <path d="M30 26 Q35 26 35 32 Q35 36 30 36 Q26 34 26 28 Q26 26 30 26" fill="#1185FE"/>
+  <ellipse cx="72" cy="75" rx="18" ry="22" fill="#1185FE"/>
   
   <!-- Center body -->
-  <circle cx="20" cy="20" r="4" fill="#1185FE"/>
+  <circle cx="50" cy="50" r="8" fill="#1185FE"/>
 </svg>
